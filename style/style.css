@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* Compensa o header fixo */
+main {
+    padding-top: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+
+.header {
+    background: #111;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo h1 {
+    font-size: 22px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #caa472;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('../imagens/heard_capa.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+}
+
+/* BOTÕES */
+
+.btn-principal {
+    background: #caa472;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-secundario {
+    border: 2px solid #caa472;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #caa472;
+    display: inline-block;
+}
+
+.grande {
+    font-size: 18px;
+}
+
+/* SEÇÕES */
+
+.secao {
+    padding: 80px 0; /* antes estava grande demais */
+    text-align: center;
+}
+
+.secao h2 {
+    margin-bottom: 16px;
+}
+
+.secao p {
+    margin-bottom: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque {
+    background: #f5f5f5;
+}
+
+/* GRID */
+
+.grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTATO */
+
+.contato {
+    background: #111;
+    color: white;
+    padding: 100px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
