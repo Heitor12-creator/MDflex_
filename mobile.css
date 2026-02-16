@@ -1,0 +1,162 @@
+/* ===== CONFIGURAÇÃO MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 40px 0;
+        min-height: auto;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* GRID vira coluna */
+    .grid {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* SEÇÕES */
+    .secao {
+        padding: 60px 0;
+    }
+
+    /* BOTÕES */
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* ===== MENU MOBILE FUNCIONANDO ===== */
+@media (max-width: 768px) {
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none; /* escondido por padrão */
+        z-index: 999;
+    }
+
+    .menu.ativo {
+        display: flex; /* aparece ao clicar */
+    }
+
+    .menu-mobile {
+        display: block;
+        color: #fff;
+        z-index: 1001;
+    }
+
+    .social {
+        display: none;
+    }
+}
+/* ===== MENU LATERAL MOBILE (DIREITA) ===== */
+@media (max-width: 768px) {}
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* escondido à direita */
+        width: 300px;
+        height: 100vh;
+        background: #111;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        /* animação suave */
+        transition: right 0.35s ease-in-out;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.4);
+        z-index: 1000;
+    }
+
+    .menu.ativo {
+        right: 0; /* entra pela direita */
+    }
+
+/* ===== MENU LATERAL MOBILE (DIREITA + ANIMAÇÃO SUAVE) ===== */
+@media (max-width: 768px) {
+
+    /* sobrescreve apenas a posição do menu */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -280px;          /* escondido à direita */
+        left: auto;             /* garante que não venha da esquerda */
+        width: 280px;
+        height: 100vh;
+        background: #111;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        transition: right 0.35s ease-in-out;
+        box-shadow: -6px 0 20px rgba(0,0,0,0.45);
+        z-index: 1000;
+    }
+
+    /* quando ativo, entra pela direita */
+    .menu.ativo {
+        right: 0;
+    }
+
+    /* animação dos links */
+    .menu a {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+
+    .menu.ativo a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
